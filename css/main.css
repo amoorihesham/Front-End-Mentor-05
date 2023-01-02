@@ -22,33 +22,32 @@
 body {
   font-size: 15px;
   font-family: "Inter", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   background-color: var(--main-BG);
-  margin: 20px;
 }
 /* *************************** */
 .container {
     max-width: 1020px;
-    margin-bottom: 2rem;
+    margin: 2rem 2rem;
     background-color: var(--card-BG);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-radius: .75rem;
+    border-radius: .5rem;
     overflow: hidden;
 }
 .container .left {
-    padding: 50px;
+    padding: 0 60px;
 }
 .left .main-title {
     color: var(--heading-color);
     font-family: var(--font-family-2);
-    font-size: 2.25rem;
+    font-size: 2.2rem;
     font-weight: 900;
     margin-bottom: 2rem;
+    margin-top: 60px;
 }
 .main-title span{
     color: var(--overlay-BG);
@@ -56,16 +55,16 @@ body {
 .left .description {
     color: var(--main-paragrah);
     font-family: var(--font-family-2);
-    line-height: 1.5;
+    line-height: 1.8rem;
     font-size: 15px;
     font-weight: 500;
-    margin-bottom: 6rem;
-    max-width: 346px;
+    margin-bottom: 3rem;
+    
    }
 .container .stats {
     display: flex;
     align-items: center;
-    column-gap: 55px;
+    column-gap: 60px;
 }
 .stats .stat-box .num{
 color: var(--heading-color);
@@ -114,35 +113,32 @@ margin-bottom: 5px;
         width: 780px;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .container {
         width: 330px;
+        grid-template-columns: 1fr;
     }  
      .container .left {
-    padding: 25px;
+    padding: 25px 25px 75px 25px;
     text-align: center;
-    grid-column: 1/-1;
+    
     }
     .container .left .main-title {
-        margin-bottom: 1rem;
-    max-width: 300px;
+        margin-bottom: 2rem;
+   margin-top: 10px;
     font-size: 30px;
     }
     .left  .description{
-    margin-bottom: 2rem;
-    max-width: 272px;
+    margin-bottom: 3rem;
+    font-size: 16px;
     }
     .container .stats{
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
-    }
-    .container .main-img img{
-        display: block;
+    row-gap: 25px;
     }
     .container .main-img {
-        grid-column: 1 / 3;
-        grid-row: 1 /-4;
+        order: -1;
     }
 }
 
